@@ -73,8 +73,50 @@ Um dos objetivos principais da normalização é evitar ou pelo menos amenizar a
 
 Um banco de dados normalizado dentro dos padrões reduz o trabalho de manutenção e ajuda a evitar o desperdício do espaço de armazenamento, dentre outros benefícios.
 
+OBS: A normalização é um processo corretivo que deve ser aplicado em casos específicos onde o problema foi identificado.
+
+### Problemas gerados por não normalizar 
+* Redundância de dados e desorganização deles
+* Complicações no acréscimo de números e na busca de dados
 
 ## Primeira Forma Normal
+Uma estidade estará na primeira foram normal se todos os campos forem atômicos (simples) e não multivalorados (com múltiplos valores).
+foto 
+- obs: Uma tabela que aceita compos vazios é uma tabela problemática. Todos os campos devem ser importantes para estar na tabela e campos impostantes não podem ficar vazios. A solução é criar uma nova tabela!
+
+## Segunda Forma Normal 
+Uma entidade estará na 2FN se ela já se encontra na 1FN e todos os atributos não-chave forem totalmente dependentes da chave primária 
+foto
+
+O código do produto da tabela de Pedidos faz referência à chave primária da tabela de Produtos, portanto há um relacionamento entre as tabelas
+
+## Terceira Forma Normal 
+Cada uma das formas normais tende a ir refinando a modelagem e deixando a estrutura de dados mais íntegra e exclusiva, evitando repetições desnecessárias e possíveis sobrecarga no gerenciador de banco de dados. 
+
+Uma tabela estará na 3FN se ela estiver na 2FN e se nenhuma coluna não-chave depender de outra coluna não-chave. Ou seja, na 3FN temos simplesmente que eliminar os campos que podem ser obtidos pela equação de outros campos da mesma tabela. 
+
+foto 
+
+## Outras Formas de Normalização 
+## Quarta Forma Normal 
+Uma entidade estará na 4FN se estiver na 3FN e na tabela não conter múltiplas estradas multivaloradas (valores repetidos em diferentes colunas), ou seja, a presença de uma ou mais linhas em uma tabela implica na presença de uma ou mais outras linhas na mesma tabela. 
+
+foto
+## Quinta Forma Normal
+Uma entidade estará na 5FN se estiver na 4FN e quando um atributo está em outra tabela sem a necessidade de estar na tabela pesquisada e pode ser removida sem a perda de nunhuma informação.
+
+foto
+
+# MER - Modelo Entidade-Relacionamento 
+Nomenclaturas de tabelas: Sempre em letras minúscolas, nome composto separados por _ (underline) 
+
+ 
+
+
+
+
+
+
 
 
 
